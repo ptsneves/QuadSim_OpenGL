@@ -23,7 +23,6 @@ import numpy
 from ObjLoader import *
 import os
 from ctypes import c_float
-#!/usr/bin/env python
 
 from multicopter import MultiCopter
 import util, time, os, sys, math
@@ -228,6 +227,7 @@ from optparse import OptionParser
 parser = OptionParser("sim_multicopter.py [options]")
 parser.add_option("--simin",  dest="simin",   help="SIM input (IP:port)",       default="127.0.0.1:5502")
 parser.add_option("--simout", dest="simout",  help="SIM output (IP:port)",      default="127.0.0.1:5501")
+parser.add_option("--fgout", dest="fgout",  help="flightgear output (IP:port)", default="127.0.0.1:5503")
 parser.add_option("--home", dest="home",  type='string', default=None, help="home lat,lng,alt,hdg")
 parser.add_option("--rate", dest="rate", type='int', help="SIM update rate", default=200)
 parser.add_option("--wind", dest="wind", help="Simulate wind (speed,direction,turbulance)", default='0,0,0')
